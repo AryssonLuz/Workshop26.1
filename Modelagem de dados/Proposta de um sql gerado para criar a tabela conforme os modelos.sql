@@ -43,20 +43,3 @@ CREATE TABLE Aluno
  FOREIGN KEY (ID_Matricula) REFERENCES Matricula(ID_Matricula)
 ); 
 
-CREATE TABLE Constitui 
-( 
- RG INT,  
- ID_Turma INT,
- PRIMARY KEY (RG, ID_Turma),
- FOREIGN KEY (RG) REFERENCES Aluno(RG),
- FOREIGN KEY (ID_Turma) REFERENCES Turma(ID_Turma)
-); 
-
-CREATE TABLE Prove 
-( 
- ID_Curso INT,  
- RG INT,
- PRIMARY KEY (ID_Curso, RG),
- FOREIGN KEY (ID_Curso) REFERENCES Curso(ID_Curso),
- FOREIGN KEY (RG) REFERENCES Professor(RG)
-);
